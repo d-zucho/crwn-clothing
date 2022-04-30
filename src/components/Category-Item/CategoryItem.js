@@ -1,7 +1,7 @@
 import React from 'react'
-import './category.styles.scss'
+import './category-item.styles.scss'
 
-const Category = ({ category }) => (
+const CategoryItem = ({ category }) => (
   <div className='category-container'>
     <div
       className='background-image'
@@ -16,4 +16,4 @@ const Category = ({ category }) => (
   </div>
 )
 
-export default Category
+export default CategoryItem

@@ -1,6 +1,5 @@
-import CategoryItem from './components/Category-Item/CategoryItem'
-import './App.scss'
-import CategoryMenu from './components/Category-Menu/CategoryMenu'
+import CategoryItem from '../Category-Item/CategoryItem'
+import './category-menu.styles.scss'
 
 const categories = [
   {
@@ -30,8 +29,15 @@ const categories = [
   },
 ]
 
-function App() {
-  return <CategoryMenu />
+const CategoryMenu = () => {
+  return (
+    <div className='categories-container'>
+      {categories.map((category) => (
+        //* category container = inside Category component
+        <CategoryItem key={category.id} category={category} />
+      ))}
+    </div>
+  )
 }
 
-export default App
+export default CategoryMenu
